@@ -1,15 +1,20 @@
 ---
 name: prompt
-description: Use when translating Brazilian Portuguese messages into English prompts for Claude Code — preserves intent, clarifies ambiguity, and surfaces urgency signals that colloquial Portuguese would lose.
+description: Interprets colloquial Brazilian Portuguese requests, resolves ambiguities, gathers minimal project context (1-2 lookups), and structures precise English prompts for AI agents. Not just translation — it thinks about what the user means.
 ---
 
-# Portuguese to English Prompt Translation
+# Portuguese Prompt Interpreter
 
 ## Overview
 
-Brazilian Portuguese prompts are colloquial and context-heavy; English prompts need explicit requirements. This skill bridges the gap by clarifying vague terms, preserving urgency signals, handling idioms, and structuring requests.
+This skill goes beyond translation. It **interprets** colloquial Brazilian Portuguese requests, **resolves ambiguities**, **gathers minimal project context** when needed, and **structures** precise English prompts that AI agents can execute without guessing.
 
-**Core principle:** Colloquial Portuguese assumes shared context. English for Claude requires clear scope, constraints, and success criteria.
+**Core principle:** Colloquial Portuguese assumes shared context. English for AI agents requires clear scope, constraints, and success criteria. This skill bridges that gap by thinking, not just translating.
+
+> **YOUR ONLY OUTPUT IS A STRUCTURED ENGLISH PROMPT.**
+> Do NOT implement, scaffold, explore files, or run any code.
+> Do NOT attempt to solve the problem described.
+> Stop after delivering the prompt inside a code block and wait for user confirmation.
 
 > **YOUR ONLY OUTPUT IS A STRUCTURED ENGLISH PROMPT.**
 > Do NOT implement, scaffold, explore files, or run any code.

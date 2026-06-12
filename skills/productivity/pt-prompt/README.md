@@ -1,40 +1,42 @@
-<p align="center">
-  <img src="https://i.ibb.co/fzYxJD1P/IMG-20260403-WA0026.jpg" width="600" />
-</p>
+# pt-prompt
 
-A Claude Code skill that translates colloquial Brazilian Portuguese messages into highly structured English prompts. 
+A Claude Code skill that goes far beyond translation — it interprets colloquial Brazilian Portuguese requests, resolves ambiguities, gathers minimal project context, and structures precise English prompts that any AI agent can execute flawlessly.
 
-Brazilian Portuguese prompts are often context-heavy and colloquial, whereas English prompts for AI agents require explicit requirements, scope, and constraints. This skill automatically bridges that gap, ensuring Claude understands exactly what you need.
+Brazilian Portuguese prompts are often context-heavy, colloquial, and assume shared understanding. English prompts for AI agents require explicit requirements, scope, and constraints. This skill bridges that gap by **thinking** about what the user really means, not just translating words.
 
-## Features
+## What It Does
 
-* **Intent Extraction**: Identifies the core ask behind colloquial phrases (e.g., *"ta lento"* -> *"improve render performance"*).
-* **Urgency Preservation**: Maps cultural signals like *"pra ontem"* to explicit English deadlines or urgency flags.
-* **Ambiguity Resolution**: Automatically identifies vague terms and ensures they are clarified.
-* **Structured Output**: Formats the final English prompt into a clean, actionable structure: `Purpose → Requirements → Constraints → Expected Deliverable → Edge Cases`.
+1. **Interprets Intent** — Reads between the lines of colloquial Portuguese (e.g., *"ta lento"* -> *"improve render performance"*, not just "is slow").
+2. **Resolves Ambiguities** — Identifies vague terms and forces clarification before the agent acts.
+3. **Gathers Minimal Context** — Performs 1-2 targeted lookups (project memory, `CLAUDE.md`) to fill gaps without over-exploring.
+4. **Preserves Urgency & Emotion** — Maps cultural signals like *"pra ontem"* to explicit deadlines or urgency flags.
+5. **Structures for Action** — Formats the final prompt into a clean, actionable structure: `Purpose → Requirements → Constraints → Expected Deliverable → Edge Cases`.
+
+> **Result:** The agent receives a prompt it can execute without guessing, not just a translated version of what the user said.
 
 ## Installation
 
 You can install this skill directly into Claude Code using the following command:
 
 ```bash
-claude skill add https://github.com/gpaiva00/pt-en-prompt
+npx skills@latest add gpaiva00/skills
 ```
 
-Or:
+Or select just this skill from the repo:
 ```bash
-# bun
-bunx skills add https://github.com/gpaiva00/pt-en-prompt
-
-# npm
-npx skills add https://github.com/gpaiva00/pt-en-prompt
+npx skills@latest add gpaiva00/skills --skill pt-prompt
 ```
 
 ## Usage
 
-Simply type your request in Brazilian Portuguese within Claude Code. If the message contains colloquialisms, implicit requirements, or high urgency, the skill will kick in, process the request, and output a structured English prompt in a code block.
+Simply type your request in Brazilian Portuguese within Claude Code. The skill will:
 
-Claude will wait for your confirmation on the structured prompt before executing the actual task.
+1. **Analyze** your message for colloquialisms, implicit requirements, and ambiguities
+2. **Look up** minimal project context if needed (stack, conventions, existing patterns)
+3. **Structure** a precise English prompt in a code block
+4. **Wait** for your confirmation before the agent executes
+
+This means you get a prompt that the agent truly understands — not just a translated guess.
 
 **Example Input:**
 > "me ajude a implementar tags nas tarefas, precisa funcionar offline, usar localStorage, cores customizáveis, máximo 12 cores, pra ontem"

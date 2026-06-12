@@ -12,7 +12,7 @@ npx skills@latest add gpaiva00/skills
 
 ### Productivity
 
-- **[pt-prompt](/skills/productivity/pt-prompt/SKILL.md)** — Translate colloquial Brazilian Portuguese messages into structured English prompts for Claude Code.
+- **[pt-prompt](/skills/productivity/pt-prompt/SKILL.md)** — Interprets colloquial Brazilian Portuguese requests, resolves ambiguities, gathers minimal project context, and structures precise English prompts for AI agents.
 
 ## About
 
