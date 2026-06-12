@@ -1,6 +1,6 @@
 # pt-prompt
 
-A Claude Code skill that goes far beyond translation — it interprets colloquial Brazilian Portuguese requests, resolves ambiguities, gathers minimal project context, and structures precise English prompts that any AI agent can execute flawlessly.
+An AI agent skill that goes far beyond translation — it interprets colloquial Brazilian Portuguese requests, resolves ambiguities, gathers minimal project context, and structures precise English prompts that any AI agent can execute flawlessly.
 
 Brazilian Portuguese prompts are often context-heavy, colloquial, and assume shared understanding. English prompts for AI agents require explicit requirements, scope, and constraints. This skill bridges that gap by **thinking** about what the user really means, not just translating words.
 
@@ -16,7 +16,7 @@ Brazilian Portuguese prompts are often context-heavy, colloquial, and assume sha
 
 ## Installation
 
-You can install this skill directly into Claude Code using the following command:
+You can install this skill directly into your agent using the following command:
 
 ```bash
 npx skills@latest add gpaiva00/skills
@@ -29,7 +29,7 @@ npx skills@latest add gpaiva00/skills --skill pt-prompt
 
 ## Usage
 
-Simply type your request in Brazilian Portuguese within Claude Code. The skill will:
+Simply type your request in Brazilian Portuguese within your agent harness. The skill will:
 
 1. **Analyze** your message for colloquialisms, implicit requirements, and ambiguities
 2. **Look up** minimal project context if needed (stack, conventions, existing patterns)

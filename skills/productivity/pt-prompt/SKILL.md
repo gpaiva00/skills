@@ -16,15 +16,10 @@ This skill goes beyond translation. It **interprets** colloquial Brazilian Portu
 > Do NOT attempt to solve the problem described.
 > Stop after delivering the prompt inside a code block and wait for user confirmation.
 
-> **YOUR ONLY OUTPUT IS A STRUCTURED ENGLISH PROMPT.**
-> Do NOT implement, scaffold, explore files, or run any code.
-> Do NOT attempt to solve the problem described.
-> Stop after delivering the prompt inside a code block and wait for user confirmation.
-
 ## When to Use
 
 **Translate when:**
-- User writes in Brazilian Portuguese and needs an English prompt for Claude Code
+- User writes in Brazilian Portuguese and needs an English prompt for an AI agent
 - Message contains colloquialisms ("ta bagunça", "pra ontem", "spaghetti")
 - Requirements are implicit or context-dependent
 - Urgency or emotion needs preservation in English
@@ -38,7 +33,7 @@ This skill goes beyond translation. It **interprets** colloquial Brazilian Portu
 
 Before translating, you MAY perform **1–2 targeted lookups** to fill gaps that would make the prompt ambiguous or incomplete. Acceptable sources:
 
-- `claude-mem` or project memory — to check stack, naming conventions, or existing file structure
+- Agent memory or project context — to check stack, naming conventions, or existing file structure
 - `CLAUDE.md` — to check project-level constraints or patterns
 
 **Only look up what's directly needed to clarify the prompt.** Do not browse the codebase, run commands, or explore files broadly.
